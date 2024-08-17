@@ -1,0 +1,38 @@
+/* navbar.css */
+
+/* Basic reset for unordered list */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Style for individual navigation items */
+  nav ul li {
+    float: left;
+  }
+  
+  /* Links inside the navigation bar */
+  nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  /* Change color on hover */
+  nav ul li a:hover {
+    background-color: #111;
+    color: #ff6347; /* Optional: Add a color change to highlight the item */
+  }
+  
+  /* For mobile screens, stack the items vertically */
+  @media screen and (max-width: 600px) {
+    nav ul li {
+      float: none;
+    }
+  }
