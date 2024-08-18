@@ -14,9 +14,6 @@ const app = express();
 // Connect to the database
 connectDB();
 
-console.log('MONGO_URI:', process.env.MONGO_URI);
-console.log('JWT_SECRET:', process.env.JWT_SECRET);
-
 // Middleware setup
 app.use(helmet());
 app.use(xss());
@@ -34,7 +31,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // Define API routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/protected', require('./routes/protected'));
-app.use('/api/videos', require('./routes/video'));
+app.use('/api/videos', require('./routes/videoRoutes'));  // Corrected to use the proper videoRoutes file
 
 // Serve static files from the React app build
 app.use(express.static(path.join(__dirname, 'build')));
@@ -53,6 +50,7 @@ app.use((err, req, res, next) => {
 // Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
 
 

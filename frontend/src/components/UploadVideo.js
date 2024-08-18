@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const VideoUpload = () => {
+const UploadVideo = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [videoFile, setVideoFile] = useState(null);
@@ -98,7 +98,7 @@ const VideoUpload = () => {
   );
 };
 
-export default VideoUpload;
+export default UploadVideo;
 
 
 

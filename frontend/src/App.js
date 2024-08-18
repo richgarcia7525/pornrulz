@@ -1,26 +1,37 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import NavBar from './components/NavBar'; 
-import TagsPage from './components/TagsPage'; // Import TagsPage
-import './App.css';
+import LoginForm from './components/LoginForm';
+import Register from './components/Register';
+import UploadVideo from './components/UploadVideo';
+import VideoList from './components/VideoList';
+import AgeVerification from './components/AgeVerification'; // Import the AgeVerification component
 
 function App() {
+  const [isVerified, setIsVerified] = useState(false); // State to track age verification
+
+  const handleVerification = () => {
+    setIsVerified(true);
+  };
+
   return (
     <Router>
-      <div className="App">
-        <NavBar />
+      {!isVerified && <AgeVerification onVerified={handleVerification} />}
+      {isVerified && (
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/tags" element={<TagsPage />} /> {/* Add TagsPage Route */}
-          {/* Add more routes here as needed */}
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/upload" element={<UploadVideo />} />
+          <Route path="/videos" element={<VideoList />} />
         </Routes>
-      </div>
+      )}
     </Router>
   );
 }
 
 export default App;
+
 
 
 

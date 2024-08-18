@@ -1,0 +1,15 @@
+.video-carousel {
+    display: flex;
+    overflow-x: scroll;
+  }
+  
+  .video-item {
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .view-more {
+    margin-top: 20px;
+    text-align: right;
+  }
+  
