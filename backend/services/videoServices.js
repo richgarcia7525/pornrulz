@@ -1,6 +1,6 @@
 const { fetchFromRapidAPI } = require('./apiService');
 
-// Example: Function to search videos using RapidAPI
+// Function to search videos using RapidAPI
 async function searchVideos(query, params = {}) {
   try {
     const searchParams = { ...params, q: query };
@@ -15,5 +15,6 @@ async function searchVideos(query, params = {}) {
 module.exports = {
   searchVideos,
 };
+
 
 

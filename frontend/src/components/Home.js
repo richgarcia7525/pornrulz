@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import './Home.css';
 
 const Home = () => {
   const [videos, setVideos] = useState([]);
@@ -33,11 +34,23 @@ const Home = () => {
   }
 
   return (
-    <div>
-      <h1>Video List</h1>
-      <div>
+    <div className="home-container">
+      <div className="parallax-section">
+        {['pic1.jpg', 'pic2.jpg', 'pic3.jpg'].map((image, index) => (
+         <div
+         className="parallax-item"
+         key={index}
+         style={{ backgroundImage: `url('/images/${image}')` }}
+       >
+         <div className="overlay-text">Featured {index + 1}</div>
+       </div>
+       
+        ))}
+      </div>
+
+      <div className="video-list">
         {videos.map((video, index) => (
-          <div key={index}>
+          <div key={index} className="glassmorphic-card video-item">
             <h2>{video.name}</h2>
             <a href={video.sourceUrl} target="_blank" rel="noopener noreferrer">Watch Video</a>
           </div>
@@ -48,6 +61,20 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

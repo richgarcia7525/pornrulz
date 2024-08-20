@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/NavBar.css';
-
+import './styles/NavBar.css';
 
 const NavBar = () => {
   return (
@@ -11,20 +10,19 @@ const NavBar = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/login">Login</Link>
+          <Link to="/tags">Tags</Link>
         </li>
         <li>
-          <Link to="/register">Register</Link>
+          <Link to="/videos">Videos</Link> {/* Add Link to Videos */}
         </li>
-        <li>
-          <Link to="/upload">Upload Video</Link>
-        </li>
+        {/* Add more links as needed */}
       </ul>
     </nav>
   );
 };
 
 export default NavBar;
+
 
 
 

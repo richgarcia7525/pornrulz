@@ -1,5 +1,5 @@
 import React from 'react';
-import './VideoCarousel.css';
+import './VideoCarousel.css'; // Adjusted path if it's in the styles folder
 
 const VideoCarousel = () => {
   const dummyVideos = [
@@ -24,3 +24,5 @@ const VideoCarousel = () => {
 };
 
 export default VideoCarousel;
+
+

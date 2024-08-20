@@ -1,6 +1,6 @@
 // src/components/PreferenceSelection.js
 import React, { useState } from 'react';
-import '../styles/PreferenceSelection.css';
+import './styles/PreferenceSelection.css';
 
 const PreferenceSelection = ({ onComplete }) => {
   const [preference, setPreference] = useState('');

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/AgeVerification.css';
+import './AgeVerification.css';
 
 
 const AgeVerification = ({ onVerified }) => {

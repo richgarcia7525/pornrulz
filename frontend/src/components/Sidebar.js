@@ -1,5 +1,5 @@
 import React from 'react';
-import './Sidebar.css';
+import './Sidebar.css'; // Adjusted path if it's in the styles folder
 
 const Sidebar = () => {
   return (
@@ -16,3 +16,6 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
+
+
